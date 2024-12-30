@@ -3,82 +3,211 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="אבן זיכרון - אתר הנצחה וזיכרון">
     <title>אבן זיכרון</title>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- הוספת CSS של Lightbox -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
     <style>
         body {
-            font-family: 'David', serif;
-            text-align: center;
-            background-color: #f4f4f4;
+            font-family: 'Heebo', sans-serif;
             margin: 0;
             padding: 0;
-        }
-        h1 {
-            font-size: 3em;
+            background-color: #f8f8f8;
             color: #333;
-            margin-top: 20px;
         }
-        h2 {
-            font-size: 1.5em;
-            color: #555;
+        header {
+            background-color: #4a4a4a;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
         }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            font-size: 1.2em;
+            margin: 10px 0 0;
+        }
+
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 10px;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
             padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
         }
         .gallery img {
             width: 100%;
             height: auto;
-            border: 2px solid #ddd;
-            border-radius: 8px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.5s ease, opacity 0.5s ease;
         }
         .gallery img:hover {
-            border-color: #333;
+            transform: scale(1.05);
         }
-        .contact-button {
+
+        .contact {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .contact a {
             display: inline-block;
-            margin: 20px 0;
+            background-color: #4a4a4a;
+            color: white;
+            text-decoration: none;
             padding: 15px 30px;
             font-size: 1.2em;
-            color: #fff;
-            background-color: #333;
-            text-decoration: none;
             border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
-        .contact-button:hover {
-            background-color: #555;
+        .contact a:hover {
+            background-color: #333;
+        }
+
+        footer {
+            background-color: #4a4a4a;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 0.9em;
+        }
+        footer p {
+            margin: 0;
         }
     </style>
 </head>
 <body>
-    <h1>אבן זיכרון</h1>
-    <h2>באר שבע</h2>
+    <header>
+        <h1>אבן זיכרון</h1>
+        <p>לזכור ולהנציח את יקירינו</p>
+    </header>
 
-    <div class="gallery">
-        <img src="https://i.imgur.com/v3cqWUy.jpeg" alt="">
-        <img src="https://i.imgur.com/0F5oX1Z.jpeg" alt="">
-        <img src="https://i.imgur.com/3cLrewi.jpeg" alt="">
-        <img src="https://i.imgur.com/RePtilA.jpeg" alt="">
-        <img src="https://i.imgur.com/sNDJLOX.jpeg" alt="">
-        <img src="https://i.imgur.com/lI3ONCk.jpeg" alt="">
-        <img src="https://i.imgur.com/seOMFkD.jpeg" alt="">
-        <img src="https://i.imgur.com/gh3YkIO.jpeg" alt="">
-        <img src="https://i.imgur.com/Dh5juBL.jpeg" alt="">
-        <img src="https://i.imgur.com/GustxHI.jpeg" alt="">
-        <img src="https://i.imgur.com/dgO5F3U.jpeg" alt="">
-        <img src="https://i.imgur.com/hzyrbpN.jpeg" alt="">
-        <img src="https://i.imgur.com/7jNCQd0.jpeg" alt="">
-        <img src="https://i.imgur.com/pOB3NW7.jpeg" alt="">
-        <img src="https://i.imgur.com/Mkpeb8i.jpeg" alt="">
-        <img src="https://i.imgur.com/XE3Fgcl.jpeg" alt="">
-        <img src="https://i.imgur.com/TJQemn6.jpeg" alt="">
-        <img src="https://i.imgur.com/idP4LDA.jpeg" alt="">
-        <img src="https://i.imgur.com/gz6lshH.jpeg" alt="">
-        <img src="https://i.imgur.com/nlEKNcX.jpeg" alt="">
-        <img src="https://i.imgur.com/Q5HvuYV.jpeg" alt="">
+    <!-- גלריה -->
+    <section>
+        <div class="gallery">
+            <!-- כל 35 התמונות עם Lightbox -->
+            <a href="https://i.imgur.com/v3cqWUy.jpeg" data-lightbox="gallery" data-title="תמונה 1">
+                <img src="https://i.imgur.com/v3cqWUy.jpeg" alt="תמונה 1">
+            </a>
+            <a href="https://i.imgur.com/0F5oX1Z.jpeg" data-lightbox="gallery" data-title="תמונה 2">
+                <img src="https://i.imgur.com/0F5oX1Z.jpeg" alt="תמונה 2">
+            </a>
+            <a href="https://i.imgur.com/3cLrewi.jpeg" data-lightbox="gallery" data-title="תמונה 3">
+                <img src="https://i.imgur.com/3cLrewi.jpeg" alt="תמונה 3">
+            </a>
+            <a href="https://i.imgur.com/RePtilA.jpeg" data-lightbox="gallery" data-title="תמונה 4">
+                <img src="https://i.imgur.com/RePtilA.jpeg" alt="תמונה 4">
+            </a>
+            <a href="https://i.imgur.com/sNDJLOX.jpeg" data-lightbox="gallery" data-title="תמונה 5">
+                <img src="https://i.imgur.com/sNDJLOX.jpeg" alt="תמונה 5">
+            </a>
+            <a href="https://i.imgur.com/lI3ONCk.jpeg" data-lightbox="gallery" data-title="תמונה 6">
+                <img src="https://i.imgur.com/lI3ONCk.jpeg" alt="תמונה 6">
+            </a>
+            <a href="https://i.imgur.com/seOMFkD.jpeg" data-lightbox="gallery" data-title="תמונה 7">
+                <img src="https://i.imgur.com/seOMFkD.jpeg" alt="תמונה 7">
+            </a>
+            <a href="https://i.imgur.com/gh3YkIO.jpeg" data-lightbox="gallery" data-title="תמונה 8">
+                <img src="https://i.imgur.com/gh3YkIO.jpeg" alt="תמונה 8">
+            </a>
+            <a href="https://i.imgur.com/Dh5juBL.jpeg" data-lightbox="gallery" data-title="תמונה 9">
+                <img src="https://i.imgur.com/Dh5juBL.jpeg" alt="תמונה 9">
+            </a>
+            <a href="https://i.imgur.com/GustxHI.jpeg" data-lightbox="gallery" data-title="תמונה 10">
+                <img src="https://i.imgur.com/GustxHI.jpeg" alt="תמונה 10">
+            </a>
+            <a href="https://i.imgur.com/dgO5F3U.jpeg" data-lightbox="gallery" data-title="תמונה 11">
+                <img src="https://i.imgur.com/dgO5F3U.jpeg" alt="תמונה 11">
+            </a>
+            <a href="https://i.imgur.com/hzyrbpN.jpeg" data-lightbox="gallery" data-title="תמונה 12">
+                <img src="https://i.imgur.com/hzyrbpN.jpeg" alt="תמונה 12">
+            </a>
+            <a href="https://i.imgur.com/7jNCQd0.jpeg" data-lightbox="gallery" data-title="תמונה 13">
+                <img src="https://i.imgur.com/7jNCQd0.jpeg" alt="תמונה 13">
+            </a>
+            <a href="https://i.imgur.com/pOB3NW7.jpeg" data-lightbox="gallery" data-title="תמונה 14">
+                <img src="https://i.imgur.com/pOB3NW7.jpeg" alt="תמונה 14">
+            </a>
+            <a href="https://i.imgur.com/Mkpeb8i.jpeg" data-lightbox="gallery" data-title="תמונה 15">
+                <img src="https://i.imgur.com/Mkpeb8i.jpeg" alt="תמונה 15">
+            </a>
+            <a href="https://i.imgur.com/XE3Fgcl.jpeg" data-lightbox="gallery" data-title="תמונה 16">
+                <img src="https://i.imgur.com/XE3Fgcl.jpeg" alt="תמונה 16">
+            </a>
+            <a href="https://i.imgur.com/TJQemn6.jpeg" data-lightbox="gallery" data-title="תמונה 17">
+                <img src="https://i.imgur.com/TJQemn6.jpeg" alt="תמונה 17">
+            </a>
+            <a href="https://i.imgur.com/idP4LDA.jpeg" data-lightbox="gallery" data-title="תמונה 18">
+                <img src="https://i.imgur.com/idP4LDA.jpeg" alt="תמונה 18">
+            </a>
+            <a href="https://i.imgur.com/gz6lshH.jpeg" data-lightbox="gallery" data-title="תמונה 19">
+                <img src="https://i.imgur.com/gz6lshH.jpeg" alt="תמונה 19">
+            </a>
+            <a href="https://i.imgur.com/nlEKNcX.jpeg" data-lightbox="gallery" data-title="תמונה 20">
+                <img src="https://i.imgur.com/nlEKNcX.jpeg" alt="תמונה 20">
+            </a>
+            <a href="https://i.imgur.com/Q5HvuYV.jpeg" data-lightbox="gallery" data-title="תמונה 21">
+                <img src="https://i.imgur.com/Q5HvuYV.jpeg" alt="תמונה 21">
+            </a>
+            <a href="https://i.imgur.com/ABVkyPs.jpeg" data-lightbox="gallery" data-title="תמונה 22">
+                <img src="https://i.imgur.com/ABVkyPs.jpeg" alt="תמונה 22">
+            </a>
+            <a href="https://i.imgur.com/qbFN27R.jpeg" data-lightbox="gallery" data-title="תמונה 23">
+                <img src="https://i.imgur.com/qbFN27R.jpeg" alt="תמונה 23">
+            </a>
+            <a href="https://i.imgur.com/ITEb2Vu.jpeg" data-lightbox="gallery" data-title="תמונה 24">
+                <img src="https://i.imgur.com/ITEb2Vu.jpeg" alt="תמונה 24">
+            </a>
+            <a href="https://i.imgur.com/QyVJDZq.jpeg" data-lightbox="gallery" data-title="תמונה 25">
+                <img src="https://i.imgur.com/QyVJDZq.jpeg" alt="תמונה 25">
+            </a>
+            <a href="https://i.imgur.com/QzArvFP.jpeg" data-lightbox="gallery" data-title="תמונה 26">
+                <img src="https://i.imgur.com/QzArvFP.jpeg" alt="תמונה 26">
+            </a>
+            <a href="https://i.imgur.com/WvfzNlx.jpeg" data-lightbox="gallery" data-title="תמונה 27">
+                <img src="https://i.imgur.com/WvfzNlx.jpeg" alt="תמונה 27">
+            </a>
+            <a href="https://i.imgur.com/iLEaSrI.jpeg" data-lightbox="gallery" data-title="תמונה 28">
+                <img src="https://i.imgur.com/iLEaSrI.jpeg" alt="תמונה 28">
+            </a>
+            <a href="https://i.imgur.com/cPOKA55.jpeg" data-lightbox="gallery" data-title="תמונה 29">
+                <img src="https://i.imgur.com/cPOKA55.jpeg" alt="תמונה 29">
+            </a>
+            <a href="https://i.imgur.com/6jGVAOs.jpeg" data-lightbox="gallery" data-title="תמונה 30">
+                <img src="https://i.imgur.com/6jGVAOs.jpeg" alt="תמונה 30">
+            </a>
+            <a href="https://i.imgur.com/Ebbj1Nm.jpeg" data-lightbox="gallery" data-title="תמונה 31">
+                <img src="https://i.imgur.com/Ebbj1Nm.jpeg" alt="תמונה 31">
+            </a>
+            <a href="https://i.imgur.com/RD3cluX.jpeg" data-lightbox="gallery" data-title="תמונה 32">
+                <img src="https://i.imgur.com/RD3cluX.jpeg" alt="תמונה 32">
+            </a>
+            <a href="https://i.imgur.com/Wa1vM5V.jpeg" data-lightbox="gallery" data-title="תמונה 33">
+                <img src="https://i.imgur.com/Wa1vM5V.jpeg" alt="תמונה 33">
+            </a>
+            <a href="https://i.imgur.com/f4h42bF.jpeg" data-lightbox="gallery" data-title="תמונה 34">
+                <img src="https://i.imgur.com/f4h42bF.jpeg" alt="תמונה 34">
+            </a>
+            <a href="https://i.imgur.com/c3nlweI.jpeg" data-lightbox="gallery" data-title="תמונה 35">
+                <img src="https://i.imgur.com/c3nlweI.jpeg" alt="תמונה 35">
+            </a>
+        </div>
+    </section>
+
+    <!-- כפתור יצירת קשר -->
+    <div class="contact">
+        <a href="tel:0542386262">צור קשר</a>
     </div>
 
-    <a class="contact-button" href="tel:0542386262">צור קשר</a>
+    <footer>
+        <p>© 2024 אבן זיכרון | כל הזכויות שמורות</p>
+    </footer>
+
+    <!-- הוספת JavaScript של Lightbox -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
 </body>
 </html>
