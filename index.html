@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="בניית מצבות ותחזוקה">
-    <title>אבן זיכרון</title>
+    <meta property="og:title" content="אלי מצבות">
+    <meta property="og:description" content="הכירו את שירותי אלי מצבות - בניית מצבות ותחזוקה כוללת">
+    <meta property="og:image" content="https://i.imgur.com/d7T9dwr.png">
+    <meta property="og:type" content="website">
+    <title>אלי מצבות</title>
     <!-- שילוב גופנים -->
     <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500&display=swap" rel="stylesheet">
@@ -17,32 +21,36 @@
             color: #333;
         }
         header {
-            background-color: #000;
+            background-image: url('https://i.imgur.com/d7T9dwr.png');
+            background-size: cover;
             color: #fff;
             text-align: center;
-            padding: 30px 20px;
-            position: relative;
+            padding: 40px 20px;
         }
         header h1 {
-            margin: 10px 0 0;
+            margin: 0 0 20px;
             font-family: 'Secular One', sans-serif;
-            font-size: 3.5em;
-            font-weight: 400;
-            line-height: 1.2;
-            letter-spacing: 1px;
-        }
-        header h2 {
-            margin: 10px 0 0;
-            font-family: 'Heebo', sans-serif;
-            font-size: 1.8em;
+            font-size: 3em;
             font-weight: 400;
             color: #fff;
+            text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
         }
-        header p {
-            font-size: 1.4em;
+        header h2 {
+            font-family: 'Heebo', sans-serif;
+            font-size: 1.5em;
+            font-weight: 500;
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        .sub-titles {
+            margin: 20px 0;
+            line-height: 1.6;
+        }
+        .sub-titles div {
+            font-size: 1.2em;
             font-weight: 300;
-            margin: 10px 0 0;
-            line-height: 1.5;
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
         .gallery {
             display: grid;
@@ -62,7 +70,6 @@
         .gallery img:hover {
             transform: scale(1.05);
         }
-
         footer {
             background-color: #4a4a4a;
             color: white;
@@ -73,8 +80,6 @@
         footer p {
             margin: 0;
         }
-
-        /* עיצוב כפתור יצירת קשר */
         .contact {
             position: fixed;
             bottom: 20px;
@@ -95,22 +100,18 @@
             transform: translateX(-50%) scale(1.1); /* הגדלה קטנה */
             box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7); /* צל חזק יותר */
         }
-        .contact.hidden {
-            opacity: 0;
-        }
-        .contact.visible {
-            opacity: 1;
-        }
     </style>
 </head>
 <body>
     <header>
-        <h1>אבן זיכרון</h1>
-        <h2>בניית מצבות ותחזוקה כוללת</h2>
-        <p>לזכור ולהנציח את יקיריכם</p>
+        <h1>אלי מצבות</h1>
+        <h2>בניית מצבות</h2>
+        <div class="sub-titles">
+            <div>תחזוקה כללית</div>
+            <div>תיקוני צבע לאותיות</div>
+            <div>ליטוש וחידוש המצבה</div>
+        </div>
     </header>
-
-    <!-- גלריה -->
     <section>
         <div class="gallery">
             <img src="https://i.imgur.com/v3cqWUy.jpeg" alt="תמונה 1">
@@ -150,35 +151,9 @@
             <img src="https://i.imgur.com/c3nlweI.jpeg" alt="תמונה 35">
         </div>
     </section>
-
-    <!-- כפתור יצירת קשר -->
     <a href="tel:0542386262" class="contact visible">צור קשר</a>
-
     <footer>
-        <p>© 2024 אבן זיכרון | כל הזכויות שמורות</p>
+        <p>© 2024 אלי מצבות | כל הזכויות שמורות</p>
     </footer>
-
-    <!-- JavaScript לניהול הופעת כפתור -->
-    <script>
-        let lastScroll = 0;
-        const contactButton = document.querySelector('.contact');
-
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-
-            // אם יש גלילה כלפי מטה - הסתר את הכפתור
-            if (currentScroll > lastScroll) {
-                contactButton.classList.remove('visible');
-                contactButton.classList.add('hidden');
-            } 
-            // אם הגלילה נעצרת - הצג את הכפתור
-            else {
-                contactButton.classList.remove('hidden');
-                contactButton.classList.add('visible');
-            }
-
-            lastScroll = currentScroll;
-        });
-    </script>
 </body>
 </html>
